@@ -1,4 +1,23 @@
 $(document).ready(function() {
+
+  $('.ingreso').click( function() {
+     event.preventDefault();
+     console.log("hola mundo");
+      $(".template").load('layouts/walletTemplate.php');
+  }); 
+
+  $('.gasto').click( function() {
+     event.preventDefault();
+     console.log("hola mundo");
+      $(".template").load('layouts/walletTemplate.php');
+  }); 
+
+  $('.ahorro').click( function() {
+     event.preventDefault();
+     console.log("hola mundo");
+      $(".template").load('layouts/walletTemplate.php');
+  }); 
+
   $('#crear').click(function() {
     var dataString = $('#usaurio').serialize();
     alert('Datos serializados: ' + dataString);
