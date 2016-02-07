@@ -3,6 +3,8 @@
 	$mysqli = mysqli_connect("localhost", "root", "", "prueba_ajax");	
 	$nombre = 	$_POST['name'];
 	$correo =	$_POST['email'];
+	
+
 	$sql = "INSERT INTO usuarios (nombre, correo) VALUES ('$nombre','$correo')";
 	$result = mysqli_query( $mysqli, $sql );
 

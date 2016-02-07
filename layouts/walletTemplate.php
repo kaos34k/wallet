@@ -16,4 +16,3 @@
       </div>
     </div>
   </form>
-Resultado: <span class="resultado"></span>

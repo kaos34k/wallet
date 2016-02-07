@@ -4,7 +4,7 @@
   <?php require('layouts/nav.php'); ?>
     <!-- Image Background Page Header -->
     <!-- Note: The background image is set within the business-casual.css file. -->
-    <header class="">
+    <header class="business-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -47,7 +47,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="CrIngreso">
-              <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
+              <img class="img-circle img-responsive img-center" src="img/wallet11.png" alt="">
             </div>
             <h2 class="text-center">Crea un Nuevo Ingreso</h2>
             <p></p>
@@ -60,6 +60,7 @@
                   <input type="text"  class="form-control" name="TipoIngreso" id="TipoIngreso" />
                   <br/> Cantidad de ingreso:
                   <input type="text" class="form-control" name="ValorIngreso" id="ValorIngreso" />
+                  <input type="text" class="form-control hide"  name="operacion" value='insert' id="operacion"/>
                   <br/>
                   <input type="submit" class="button btn btn-primary btn-block"  name="Enviar" value="Enviar" id="crearIngresos" />
                 </div>
@@ -80,7 +81,8 @@
                         <br/> tipo de gasto:
                         <input type="text" class="form-control" name="TipoGasto" id="TipoGasto" />
                         <br/> Cantidad de gasto:
-                        <input type="text" class="form-control" name="ValorGasto" id="ValorGasto" />
+                        <input type="text" class="form-control" name="ValorGasto" id="ValorGasto" /> 
+                        <input type="text" class="form-control hide" name="operacion" value='insert' id="operacion" />
                         <br/>
                         <input type="submit" class="button btn btn-danger btn-block" name="enviar" value="Enviar" id="crearGasto" />
                       </div>
@@ -110,6 +112,8 @@
             </div>
         </div>
         <!-- /.row -->
+        <?php require('layouts/tablaRegistrosGastos.php') ?>  
+
         <hr>
         <!-- Footer -->
         <footer>
