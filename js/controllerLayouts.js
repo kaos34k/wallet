@@ -1,32 +1,30 @@
 $(document).ready(function() {
-
-  $('.ingreso').click( function() {
-     event.preventDefault();
-     console.log("hola mundo");
-      $(".template").load('layouts/walletTemplate.php');
-  }); 
-
-  $('.gasto').click( function() {
-     event.preventDefault();
-     console.log("hola mundo");
-      $(".template").load('layouts/walletTemplate.php');
-  }); 
-
-  $('.ahorro').click( function() {
-     event.preventDefault();
-     console.log("hola mundo");
-      $(".template").load('layouts/walletTemplate.php');
-  }); 
+    $("#CrUsuario").click(function(){
+      $("#usaurio").slideToggle();
+    });
+    $("#CrIngreso").click(function(){
+      $("#ingresos").slideToggle();
+    });
+    $("#CrGasto").click(function(){
+      $("#gastos").slideToggle();
+    });
+    $("#CrAhorro").click(function(){
+      $("#ahorro").slideToggle();
+    });
+});
 
   $('#crear').click(function() {
     var dataString = $('#usaurio').serialize();
-    alert('Datos serializados: ' + dataString);
-    console.log($('#usaurio').serialize());
     $.ajax({
-      type: "JSON",
-      url: "account.php",
+      type: "POST",
+      url: "controller/walletController.php",
       data: dataString,
-      success: function(data) {}
+      success: function(data) {
+        $(".resultado").html(data);
+      },
+      done: function(data) {
+        $(".resultado").html(data);
+      },
     });
   });
 
@@ -35,7 +33,7 @@ $(document).ready(function() {
     alert('Datos serializados: ' + dataString);
     $.ajax({
       type: "JSON",
-      url: "account.php",
+      url: "controller/walletController.php",
       data: dataString,
       success: function(data) {}
     });
@@ -46,7 +44,7 @@ $(document).ready(function() {
     alert('Datos serializados: ' + dataString);
     $.ajax({
       type: "post",
-      url: "account.php",
+      url: "controller/walletController.php",
       data: dataString,
       beforeSend: function () {
         $("#resultado").html("Procesando, espere por favor...");
@@ -62,24 +60,24 @@ $(document).ready(function() {
   });
   
     $('#crearAhorro').click(function() {
-    var dataString = $('#ahorros').serialize();
-    alert('Datos serializados: ' + dataString);
-    $.ajax({
-      type: "post",
-      url: "account.php",
-      data: dataString,
-      beforeSend: function () {
-        $("#resultado").html("Procesando, espere por favor...");
-      },
-      success: function(data) {
-         alert("datos entregados"+data);
-      },
-      done: function(data) {
-         alert("datos entregados"+ data);
-        console.log(data);
-      },
+      var dataString = $('#ahorros').serializeArray();
+
+      $.ajax({
+        type: "JSON",
+        url: "controller/walletController.php",
+        data: dataString,
+        beforeSend: function () {
+          $(".resultado").html("Procesando, espere por favor...");
+        },
+        success: function(data) {
+           alert("datos entregados"+data);
+            $(".resultado").html(data);
+        },
+        done: function(data) {
+           alert("datos entregados"+ data);
+            $(".resultado").html(data);
+          console.log(data);
+        },
+      });
     });
-  }); 
-  
-});
 
