@@ -4,7 +4,7 @@
   <?php require('layouts/nav.php'); ?>
     <!-- Image Background Page Header -->
     <!-- Note: The background image is set within the business-casual.css file. -->
-    <header class="business-header">
+    <header class="">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
