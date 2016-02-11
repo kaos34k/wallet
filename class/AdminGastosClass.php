@@ -1,8 +1,7 @@
 <?php
-
 require 'DbConexion.php';
 
-if (!empty($_POST)) {
+if( !empty( $_POST ) ) {
 
 
     $msg = '';

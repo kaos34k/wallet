@@ -1,4 +1,4 @@
-  $('#crearGasto').click(function() {
+  $('#crearGasto').click( function() {
     var dataString = $('#gastos').serialize();
     alert('Datos serializados: ' + dataString);
     $.ajax({
@@ -21,11 +21,11 @@
    $('.update').click( function(id) {
     $.ajax({
         type: "POST",
-        url: "class/EditarGastoController.php",
+        url: "class/AdminGastosClass.php",
         data: {operacion: 'update', id_usuario: id}
     }).done(function (html) {
         $('#contenido').html(html);
-    }).false(function () {
+    }).fail(function () {
         alert('Error al cargar modulo');
     });
   });

@@ -1,4 +1,4 @@
-<div class="panel panel-primary">
+<div class="panel panel-primary ahorro-table">
     <div class="panel-heading">
         <h3 class="panel-title">Lista de Gastos</h3>
     </div>

@@ -8,7 +8,7 @@ $telefono = '';
 $email = '';
 $pwd = '';
 
-if (!empty($_POST)) {
+if ( !empty( $_POST ) ) {
 
 
 
@@ -30,7 +30,7 @@ if (!empty($_POST)) {
         $email = $data['email'];
         $pwd = $data['contrasena'];
     }
-    //$msg = '';
+    $msg = '';
 }
 ?>
 <link href="CSS/usuarios_css.css" rel="stylesheet" type="text/css"/>

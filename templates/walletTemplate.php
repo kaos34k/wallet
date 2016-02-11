@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row-fluid"> 
   <form id="usaurio" method="post" class="form-registro">
     <div class="row">
       <div class="large-6 columns col-md-3">
@@ -16,3 +16,4 @@
       </div>
     </div>
   </form>
+</div> 
