@@ -36,7 +36,8 @@
                         <br/> tipo de gasto:
                         <input type="text" class="form-control" name="TipoGasto" id="TipoGasto" />
                         <br/> Cantidad de gasto:
-                        <input type="text" class="form-control" name="ValorGasto" id="ValorGasto" /> 
+                        <input type="text" class="form-control" name="ValorGasto" id="ValorGasto" />
+                         
                         <input type="text" class="form-control hide" name="operacion" value='insert' id="operacion" />
                         <br/>
                         <input type="submit" class="button btn btn-danger btn-block" name="enviar" value="Enviar" id="crearGasto" />

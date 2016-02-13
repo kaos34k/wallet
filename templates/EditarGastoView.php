@@ -1,37 +1,5 @@
 <?php
-$operacion = '';
-require 'class/DbConexion.php';
 
-$nombre = '';
-$direccion = '';
-$telefono = '';
-$email = '';
-$pwd = '';
-
-if ( !empty( $_POST ) ) {
-
-
-
-    $operacion = $_POST['operacion'];
-    if ($operacion == 'update') {
-
-        $pdo = Database::connect();
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $id_usuario = $_POST['id_usuario'];
-
-        $sql = "SELECT * FROM usuarios WHERE id_usuario = ?";
-        $q = $pdo->prepare($sql);
-        $q->execute(array($id_usuario));
-        $data = $q->fetch(PDO::FETCH_ASSOC);
-
-        $nombre = $data['nombre'];
-        $direccion = $data['direccion'];
-        $telefono = $data['telefono'];
-        $email = $data['email'];
-        $pwd = $data['contrasena'];
-    }
-    $msg = '';
-}
 ?>
 <link href="CSS/usuarios_css.css" rel="stylesheet" type="text/css"/>
 <script src="JS/usuario_js.js" type="text/javascript"></script>

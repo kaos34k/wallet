@@ -32,7 +32,7 @@
                     echo '<td>' . $row['cantidad_gasto'] . '</td>';
                     echo '<td>' . $row['fecha_gasto'] . '</td>';
                     echo '<input type="text" class="form-control hide" name="id_gasto" id="id_gasto" value="' . $row['id_gasto'] . '"/>' . $row['fecha_gasto'] . '</td>';
-                    echo '<td><button class="btn btn-primary update" value="' . $row['id_gasto'] . '">Editar</button></td>';
+                    echo '<td><a  href="templates/EditarGastoView.php?id=' . $row['id_gasto'] . '"><button class="btn btn-primary" value="' . $row['id_gasto'] . '">Editar</button></td> </a>';
                     echo '<td><button class="btn btn-primary delete" value="' . $row['id_gasto'] . '">Eliminar</button></td>';
                     echo '</tr>';
                     $con++;

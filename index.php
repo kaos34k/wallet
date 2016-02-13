@@ -1,5 +1,8 @@
-<?php require('controller/directoriosCss.php'); ?>
-<?php //require('templates/walletTemplate.php'); ?>
+<?php require('includes/directorios.php'); ?>
+<?php 
+    $directorios = new Componentes();
+    $directorios->head();
+ ?>
 <body>
   <?php require('templates/nav.php'); ?>
     <!-- Image Background Page Header -->
@@ -61,4 +64,4 @@
     </div>
     <!-- /.container -->
 </body>
-<?php require('controller/directoriosJs.php'); ?>
+<?php  $directorios->javaScript(); ?>

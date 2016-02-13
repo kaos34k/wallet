@@ -1,24 +1,27 @@
   $('#crearGasto').click( function() {
     var dataString = $('#gastos').serialize();
-    alert('Datos serializados: ' + dataString);
+    //console.log(dataString);
+
     $.ajax({
       type: "POST",
-      url: "class/AdminGastosClass.php",
+      url: "controller/walletController.php",
       data: dataString,
       beforeSend: function () {
         $("#resultado").html("Procesando, espere por favor...");
       },
-      success: function(data) {
+      success: function(data) { 
+    console.log(dataString);
+
          alert("datos entregados"+data);
       },
       done: function(data) {
         alert("datos entregados"+ data);
-        alert(msg);
       },
     });
   });
 
    $('.update').click( function(id) {
+    alert(id);
     $.ajax({
         type: "POST",
         url: "class/AdminGastosClass.php",
