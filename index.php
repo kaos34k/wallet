@@ -64,4 +64,8 @@
     </div>
     <!-- /.container -->
 </body>
+<<<<<<< HEAD
 <?php  $directorios->javaScript(); ?>
+=======
+<?php require('controller/directoriosJs.php'); ?>
+>>>>>>> origin/master
