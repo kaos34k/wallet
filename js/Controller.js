@@ -9,10 +9,10 @@ $( document ).ready( function() {
 
     $(".CrGasto").click(function(){
       $("#gastos").slideToggle();
+      $(".gastos-table").slideToggle();
     });
 
     $(".CrAhorro").click(function(){
       $("#ahorro").slideToggle();
-      $(".ahorro-table").slideToggle();
-    });
+    });            
 });

@@ -2,7 +2,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="CrIngreso">
-              <img class="img-circle img-responsive img-center" src="img/wallet11.png" alt="">
+              <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
             </div>
             <h2 class="text-center">Crea un Nuevo Ingreso</h2>
             <p></p>

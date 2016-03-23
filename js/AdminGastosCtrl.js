@@ -1,23 +1,47 @@
+  $(".refress").click(function () {
+    $("#myModal").load();
+    $(".refress").load();
+  });
+
   $('#crearGasto').click( function() {
     var dataString = $('#gastos').serialize();
-    //console.log(dataString);
 
     $.ajax({
       type: "POST",
       url: "controller/walletController.php",
       data: dataString,
       beforeSend: function () {
-        $("#resultado").html("Procesando, espere por favor...");
       },
-      success: function(data) { 
-    console.log(dataString);
-
-         alert("datos entregados"+data);
+      success: function() { 
       },
-      done: function(data) {
-        alert("datos entregados"+ data);
+      done: function() {
       },
     });
+  });
+
+  $('.cargar').click( function(event){
+    event.preventDefault();
+    var consulta = $('#id-gasto-edit').val();
+        console.log( consulta );
+        $.ajax({
+        type: "POST",
+        url: "controller/walletController.php",
+        data: "id_gasto="+consulta,
+        dataType: "html",
+        beforeSend: function(){
+              //imagen de carga
+              //$("#resultado").html("<p align='center'><img src='ajax-loader.gif' /></p>");
+              console.log("cargando infomación");
+        },
+        error: function(){
+              alert("error petición ajax");
+        },
+        success: function(data){                                                    
+              $("#resultado").empty();
+              $("#resultado").append(data);
+              console.log( $("#resultado") );                                          
+        }
+    });  
   });
 
    $('.update').click( function(id) {

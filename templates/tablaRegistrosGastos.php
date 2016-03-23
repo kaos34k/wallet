@@ -1,6 +1,6 @@
-<div class="panel panel-primary ahorro-table">
-    <div class="panel-heading">
-        <h3 class="panel-title">Lista de Gastos</h3>
+<div class="panel panel-danger gastos-table">
+    <div class="panel-heading btn-red">
+        <h3 class="panel-title color-font">Lista de Gastos</h3>
     </div>
     <div class="panel-body">
         <table class="table table-striped">
@@ -22,25 +22,26 @@
                 $sql = 'SELECT * FROM gastos';
 
                 $con = 1;
-                foreach ($pdo->query($sql) as $row) {
-
+                foreach ( $pdo->query($sql) as $row ) {
                     echo "<tr>";
+                    echo '<td><input type="text" id="id-gasto-edit" value="' . $row['id_gasto'] . '"/></td>';
                     echo '<td>' . $con . '</td>';
                     echo '<td>' . $row['id_gasto'] . '</td>';
                     echo '<td>' . $row['nombre_gasto'] . '</td>';
                     echo '<td>' . $row['tipo_gasto_id'] . '</td>';
                     echo '<td>' . $row['cantidad_gasto'] . '</td>';
                     echo '<td>' . $row['fecha_gasto'] . '</td>';
-                    echo '<input type="text" class="form-control hide" name="id_gasto" id="id_gasto" value="' . $row['id_gasto'] . '"/>' . $row['fecha_gasto'] . '</td>';
-                    echo '<td><a  href="templates/EditarGastoView.php?id=' . $row['id_gasto'] . '"><button class="btn btn-primary" value="' . $row['id_gasto'] . '">Editar</button></td> </a>';
-                    echo '<td><button class="btn btn-primary delete" value="' . $row['id_gasto'] . '">Eliminar</button></td>';
+                    
+                    echo '<td><button type="button" class="btn btn-success refress cargar" data-toggle="modal" data-target="#myModal">Editar</button>';
+                    echo '<td><button class="btn btn-danger delete">Eliminar</button></td>';
                     echo '</tr>';
                     $con++;
                 }
+                require 'templates/EditarGastoView.php'; 
+              
                 Database::disconnect();
                 ?>
             </tbody>
         </table>
-
     </div>
 </div>

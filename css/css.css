@@ -4,6 +4,14 @@ form {
     display: none;
 }
 
-.ahorro-table {
-    display: none;	
+.gastos-table {
+    display: none;
+     	
+}
+
+.btn-red {
+	background:#D43F3A !important;
+}
+.color-font {
+	color: #FBEFEF !important;
 }

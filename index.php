@@ -1,10 +1,10 @@
-<?php require('includes/directorios.php'); ?>
+<?php //require('includes/directorios.php'); ?>
 <?php 
-    $directorios = new Componentes();
-    $directorios->head();
+    //$directorios = new Componentes();
+    //$directorios->head();
  ?>
 <body>
-  <?php require('templates/nav.php'); ?>
+  <?php// require('templates/nav.php'); ?>
     <!-- Image Background Page Header -->
     <!-- Note: The background image is set within the business-casual.css file. -->
     <header class="">
@@ -47,9 +47,9 @@
 
         <hr>
         <!-- fomularios -->
-        <?php require('templates/formContent.php') ?>  
+        <?php //require('templates/formContent.php') ?>  
         <!-- template listas-->
-        <?php require('templates/tablaRegistrosGastos.php') ?>  
+        <?php //require('templates/tablaRegistrosGastos.php') ?>  
 
         <hr>
         <!-- Footer -->

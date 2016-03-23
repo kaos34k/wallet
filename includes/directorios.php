@@ -30,6 +30,7 @@ public function head() {
 		<!-- Custom CSS -->
 		<link href="css/business-frontpage.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 
 	</head>
 
@@ -43,6 +44,7 @@ public function head() {
 		<!-- Core JavaScript -->
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/Chart.js"></script>
+		<script src="js/sweetalert.min.js"></script>
 
 		<!-- -->
 		<script src="js/CharCtrl.js"></script>
